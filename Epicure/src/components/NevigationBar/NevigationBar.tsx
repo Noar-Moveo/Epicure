@@ -39,21 +39,6 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ icons }) => {
       </NavigationContainer>
     );
 };
-
-    // return (
-    //     <NavigationContainer>
-    //     <LastStyledIcon onClick={() => handleIconClick(0)}>
-    //           <img src={icons[0]} alt={`Icon 0`} />
-    //         </LastStyledIcon>
-    //       <CenteredContainer>
-    //       <img src={Logo} />         
-    //        </CenteredContainer>
-    //       <RightContainer>
-    //         {rightIcons}
-    //       </RightContainer>
-    //     </NavigationContainer>
-    //   );
-    // };
     
     export default NavigationBar;
 
