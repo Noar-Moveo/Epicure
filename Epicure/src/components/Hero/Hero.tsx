@@ -1,27 +1,22 @@
 import NevigationBar from "../NevigationBar/NevigationBar.tsx";
-import UserIcon from "../../assets/Icons/Person.png";
-import MenuIcon from "../../assets/Icons/Menu.png";
-import ExploreIcon from "../../assets/Icons/Explore.png";
-import OrderIcon from "../../assets/Icons/Order.png";
 import HeaderImage from "../../assets/Images/Header.png";
 import {
   HeaderContainer,
   HeaderImg,
 } from "./HeroStyles.ts";
 import SearchBar from "../SearchBar/SearchBar.tsx";
+import { RESOURCES}  from '../../resources.ts';
 
 function Hero() {
-  const icons = [MenuIcon, ExploreIcon, UserIcon, OrderIcon];
-  const placeholder = "Search for restaurant cuisine, chef";
-  const menuOptions = ["Restaurants", "Chefs"];
+
 
 
   return (
     <>
-      <NevigationBar icons={icons} menuOptions={menuOptions} />
+      <NevigationBar icons={RESOURCES.ICONS} menuOptions={RESOURCES.MENU_OPTIONS} />
       <HeaderContainer>
         <HeaderImg src={HeaderImage} alt="Header" />
-        <SearchBar placeholder={placeholder} icon={ExploreIcon} />
+        <SearchBar placeholder={RESOURCES.PLACEHOLDER} icon={RESOURCES.ICONS[1]} />
       </HeaderContainer>
     </>
   );

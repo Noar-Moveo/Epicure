@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../colors";
 
 export const SearchContainer1 = styled.div`
   width: 335px;
@@ -16,12 +17,10 @@ export const SearchContainer1 = styled.div`
   justify-content: center;
   align-items: center;
   gap: 18px;
-  background: #ffffffe0;
-  //border: 5px solid firebrick;
+  background: ${colors.white}e0;  
   padding: 10px;
   padding-top: 16px;
   padding-bottom: 64px;
-  //border: 5px solid pink;
 `;
 
 
@@ -32,7 +31,6 @@ export const TextSearch1 = styled.div`
   line-height: 32px;
   letter-spacing: 1.97px;
   text-align: center;
-  //border: 5px solid saddlebrown;
   margin-top: 0px; 
 `;
 
@@ -40,14 +38,14 @@ export const SearchBar1 = styled.input`
   width: 100%;
   height: 30px;
   background: none;
-  border: 0.5px solid #000000;
+  border: 0.5px solid ${colors.black};
   padding: 10px 10px 10px 40px;
   font-family: Helvetica Neue;
   font-size: 14px;
-  color: #000000;
+  color: ${colors.black};
   border-radius: 4px;
   ::placeholder {
-    color: #000000;
+    color: ${colors.black};
   }
 `;
 
@@ -60,7 +58,6 @@ export const InputContainer = styled.div<{ icon: string }>`
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  //border: 5px solid darkblue;
   position: absolute;
   margin-top: 125px; 
 `;

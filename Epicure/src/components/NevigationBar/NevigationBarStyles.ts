@@ -9,7 +9,6 @@ export const NavigationContainer = styled.div`
   position: absolute;
   top: 0;
   padding: 20px;
-  //border: 4px solid saddlebrown;
 `;
 
 export const RightContainer = styled.div`
@@ -52,7 +51,6 @@ export const CenteredContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  //border: 5px solid saddlebrown;
   padding-left: 0px;
 
   @media (max-width: 899px) {

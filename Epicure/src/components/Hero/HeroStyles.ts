@@ -13,7 +13,6 @@ export const HeaderContainer = styled.div`
   position: absolute;
   margin: 0;
   margin-top: 0px;
-  //border: 5px solid darkblue;
   display: flex;
   justify-content: center;
   align-items: center;

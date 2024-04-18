@@ -1,13 +1,12 @@
-import './App.css'
-import Hero from './components/Hero/Hero';
+import "./App.css";
+import Hero from "./components/Hero/Hero";
 
 function App() {
-
   return (
     <>
-     <Hero></Hero>
+      <Hero />{" "}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
