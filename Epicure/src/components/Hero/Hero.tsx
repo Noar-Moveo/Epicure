@@ -9,14 +9,16 @@ import { RESOURCES}  from '../../resources.ts';
 
 function Hero() {
 
+  const placeholder =  "Search for restaurant cuisine, chef"
+  const menuOptions =  ["Restaurants", "Chefs"];
 
 
   return (
     <>
-      <NevigationBar icons={RESOURCES.ICONS} menuOptions={RESOURCES.MENU_OPTIONS} />
+      <NevigationBar icons={RESOURCES.ICONS} menuOptions={menuOptions} />
       <HeaderContainer>
         <HeaderImg src={HeaderImage} alt="Header" />
-        <SearchBar placeholder={RESOURCES.PLACEHOLDER} icon={RESOURCES.ICONS[1]} />
+        <SearchBar placeholder={placeholder} icon={RESOURCES.ICONS[1]} />
       </HeaderContainer>
     </>
   );

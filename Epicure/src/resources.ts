@@ -5,6 +5,4 @@ import OrderIcon from "./assets/Icons/Order.png";
 
 export const RESOURCES =  {
      ICONS: [MenuIcon, ExploreIcon, UserIcon, OrderIcon],
-     PLACEHOLDER: "Search for restaurant cuisine, chef",
-     MENU_OPTIONS: ["Restaurants", "Chefs"],
 }

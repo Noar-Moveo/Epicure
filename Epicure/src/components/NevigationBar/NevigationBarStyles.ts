@@ -91,7 +91,7 @@ export const MenuOption = styled.div`
   font-size: 18px;
   font-weight: 200;
   line-height: 21.76px;
-  letter-spacing: 1.9199999570846558px;
+  letter-spacing: 1.919px;
   text-align: left;
 
   &:hover {
