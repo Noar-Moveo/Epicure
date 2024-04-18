@@ -1,13 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface Chef {
-  id: string;
-  name: string;
-}
-
-interface ChefsState {
-  value: Chef[];
-}
+import { Chef, ChefsState } from '../../../data/State/StateTypes';
 
 const initialState: ChefsState = {
   value: [

@@ -1,13 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-interface Restaurant {
-    id: string;
-    name: string;
-}
-
-interface RestaurantState {
-    value: Restaurant[];
-}
+import { Restaurant, RestaurantState } from '../../../data/State/StateTypes';
 
 const initialState: RestaurantState =  {
     value: [

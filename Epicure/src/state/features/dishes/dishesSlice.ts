@@ -1,13 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Dish, DishesState } from '../../../data/State/StateTypes';
 
-interface Dish {
-  id: string;
-  name: string;
-}
-
-interface DishesState {
-  value: Dish[];
-}
 
 const initialState: DishesState = {
   value: [
