@@ -7,27 +7,20 @@ import HeaderImage from "../../assets/Images/Header.png";
 import {
   HeaderContainer,
   HeaderImg,
-  SearchContainer,
-  HeaderSearch,
-  SearchBar
 } from "./HeroStyles.ts";
+import SearchBar from "../SearchBar/SearchBar.tsx";
 
 function Hero() {
   const icons = [MenuIcon, ExploreIcon, UserIcon, OrderIcon];
+  const placeholder = "Search for restaurant cuisine, chef";
 
   return (
     <>
       <NevigationBar icons={icons} />
       <HeaderContainer>
         <HeaderImg src={HeaderImage} alt="Header" />
-      <SearchContainer>
-        <HeaderSearch>
-          Epicure works with the top chef restaurants in Tel Aviv
-        </HeaderSearch>{" "}
-      </SearchContainer>
-      <SearchBar></SearchBar>
+        <SearchBar placeholder={placeholder} icon={ExploreIcon} /> 
       </HeaderContainer>
-
     </>
   );
 }
