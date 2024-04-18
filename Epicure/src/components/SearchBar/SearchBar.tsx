@@ -1,9 +1,6 @@
 import { SearchBar1, SearchContainer1, TextSearch1, InputContainer } from "./SearchBarStyles";
+import { SearchBarProps } from "./Types";
 
-export interface SearchBarProps {
-  placeholder: string;
-  icon: string; 
-}
 
 const SearchBar: React.FC<SearchBarProps> = ({ placeholder, icon }) => {
     return (

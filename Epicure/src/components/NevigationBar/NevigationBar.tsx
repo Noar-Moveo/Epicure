@@ -1,7 +1,7 @@
 import {
   StyledIcon,
   NavigationContainer,
-  LastStyledIcon,
+  FirstStyledIcon,
   RightContainer,
   CenteredContainer,
   MenuOption,
@@ -24,9 +24,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ icons, menuOptions }) => 
 
     return (
       <NavigationContainer>
-          <LastStyledIcon onClick={() => handleIconClick(0)}>
+          <FirstStyledIcon onClick={() => handleIconClick(0)}>
               <img src={icons[0]} alt="Icon 0" />
-          </LastStyledIcon>
+          </FirstStyledIcon>
           <CenteredContainer>
               <img src={Logo} alt="Logo" />
               <span className="epicure-title">EPICURE</span>

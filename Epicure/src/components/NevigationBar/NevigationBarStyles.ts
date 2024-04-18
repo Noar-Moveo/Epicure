@@ -31,7 +31,7 @@ export const StyledIcon = styled.div`
 
 `;
 
-export const LastStyledIcon = styled.div`
+export const FirstStyledIcon = styled.div`
   width: 24px;
   height: 24px;
   margin-left: auto;
