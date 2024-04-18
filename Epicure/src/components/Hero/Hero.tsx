@@ -13,13 +13,15 @@ import SearchBar from "../SearchBar/SearchBar.tsx";
 function Hero() {
   const icons = [MenuIcon, ExploreIcon, UserIcon, OrderIcon];
   const placeholder = "Search for restaurant cuisine, chef";
+  const menuOptions = ["Restaurants", "Chefs"];
+
 
   return (
     <>
-      <NevigationBar icons={icons} />
+      <NevigationBar icons={icons} menuOptions={menuOptions} />
       <HeaderContainer>
         <HeaderImg src={HeaderImage} alt="Header" />
-        <SearchBar placeholder={placeholder} icon={ExploreIcon} /> 
+        <SearchBar placeholder={placeholder} icon={ExploreIcon} />
       </HeaderContainer>
     </>
   );
