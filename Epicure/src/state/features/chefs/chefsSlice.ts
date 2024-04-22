@@ -1,9 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Chef, ChefsState } from '../../../data/State/StateTypes';
+import Chef1 from '../../../assets/Images/ChefReastaurant1.png';
+
 
 const initialState: ChefsState = {
   value: [
-    { id: '1', name: 'Yossi Shitrit' },
+    { id: '1', name: 'Yossi Shitrit', imageUrl: Chef1 },
   ],
 };
 

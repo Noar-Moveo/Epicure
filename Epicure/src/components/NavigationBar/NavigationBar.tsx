@@ -5,7 +5,7 @@ import {
   RightContainer,
   CenteredContainer,
   MenuOption,
-} from "./NevigationBarStyles";
+} from "./NavigationBarStyles";
 import Logo from '../../assets/Icons/about-logo@3x 1.png';
 import { NavigationBarProps } from './Types';
 

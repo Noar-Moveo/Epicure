@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
+
 export const NavigationContainer = styled.div`
-  width: 100vw;
-  height: 46px;
+  height: 64px;
+  width: 100vw; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 0;
   padding: 20px;
-`;
+  
+  
+
+  @media (max-width: 900px) {
+    height: 46px; 
+  }
+`; 
+
 
 export const RightContainer = styled.div`
   display: flex;

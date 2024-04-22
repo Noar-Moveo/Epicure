@@ -1,4 +1,4 @@
-import NevigationBar from "../NevigationBar/NevigationBar.tsx";
+import NevigationBar from "../NavigationBar/NavigationBar.tsx";
 import HeaderImage from "../../assets/Images/Header.png";
 import {
   HeaderContainer,
@@ -20,7 +20,7 @@ function Hero() {
         <HeaderImg src={HeaderImage} alt="Header" />
         <SearchBar placeholder={placeholder} icon={RESOURCES.ICONS[1]} />
       </HeaderContainer>
-    </>
+    </ >
   );
 }
 
