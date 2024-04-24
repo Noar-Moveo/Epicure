@@ -3,7 +3,7 @@ import ExtensionRestaurantCard from "../ExtensionRestaurantsCard/ExtensionRestau
 import { RootState } from "../../state/store";
 import { Restaurant } from "../../data/State/StateTypes";
 import { PopularRestaurantsContainer } from "./PopularRestaurantStyles";
-import { title_PopularRestaurants } from "../../resources";
+import { title_PopularRestaurants } from "../../data/resources";
 const selectRestaurants = (state: RootState) => state.restaurants.value;
 
 function PopularRestaurants() {

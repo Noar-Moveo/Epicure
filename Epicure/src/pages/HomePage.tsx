@@ -3,6 +3,8 @@ import PopularRestaurants from "../components/PopularRestaurant/PopularRestauran
 import { HomePageContainer } from "./HomePageStyles";
 import SignatureDishes from "../components/SignatureDishes/SignatureDishes";
 import ChefProfile from "../components/ChefProfile/ChefProfile";
+import IconIndicator from "../components/IconIndicatior/IconIndicator";
+import Footer from "../components/Footer/Footer";
 
 const HomePage: React.FC = () => {
   return (
@@ -10,7 +12,9 @@ const HomePage: React.FC = () => {
       <Hero />
       <PopularRestaurants />
       <SignatureDishes />
+      <IconIndicator />
       <ChefProfile />
+      <Footer />
     </HomePageContainer>
   );
 };

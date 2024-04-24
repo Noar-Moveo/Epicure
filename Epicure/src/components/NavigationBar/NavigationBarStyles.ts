@@ -1,21 +1,17 @@
 import styled from "styled-components";
 
-
 export const NavigationContainer = styled.div`
   height: 64px;
-  width: 100vw; 
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  
-  
 
   @media (max-width: 900px) {
-    height: 46px; 
+    height: 46px;
   }
-`; 
-
+`;
 
 export const RightContainer = styled.div`
   display: flex;
@@ -27,30 +23,28 @@ export const StyledIcon = styled.div`
   width: 20px;
   height: 20px;
   margin-left: 20px;
-  cursor: pointer; 
-  transition: transform 0.1s ease; 
-  
-  &:hover {
-    transform: scale(1.1); 
-  }
+  cursor: pointer;
+  transition: transform 0.1s ease;
 
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const FirstStyledIcon = styled.div`
   width: 24px;
   height: 24px;
   margin-left: auto;
-  cursor: pointer; 
-  transition: transform 0.1s ease; 
-  
+  cursor: pointer;
+  transition: transform 0.1s ease;
+
   &:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
   }
   @media (min-width: 900px) {
-    display: none;  
+    display: none;
   }
 `;
-
 
 export const CenteredContainer = styled.div`
   flex: 1;
@@ -64,10 +58,11 @@ export const CenteredContainer = styled.div`
   }
 
   @media (min-width: 900px) {
-    justify-content: flex-start; 
+    justify-content: flex-start;
   }
 
-  img.logo, .epicure-title {
+  img.logo,
+  .epicure-title {
     pointer-events: none;
     padding: 0px;
   }
@@ -89,9 +84,8 @@ export const CenteredContainer = styled.div`
   }
 `;
 
-
 export const MenuOption = styled.div`
-  margin-left: 32px; 
+  margin-left: 32px;
   cursor: pointer;
   font-family: Helvetica Neue;
   font-size: 18px;
@@ -101,10 +95,53 @@ export const MenuOption = styled.div`
   text-align: left;
 
   &:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
   }
 
   @media (max-width: 899px) {
     display: none;
   }
+`;
+
+export const DropdownContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+  background-color: white;
+  z-index: 100;
+  //border: 5px solid saddlebrown;
+`;
+
+export const DropdownMenu = styled.div`
+  width: 100%;
+  height: 287px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-top: 1px solid gray;
+  //border: 5px solid saddlebrown;
+`;
+
+export const DropdownItem = styled.div`
+  font-family: Helvetica Neue;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 21.76px;
+  letter-spacing: 1.9199999570846558px;
+  text-align: left;
+  width: 100%;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+`;
+
+export const DropdownSeparator = styled.hr`
+  width: 90%;
+  border: 0;
+  height: 1px;
+  background-color: #f2f2f2;
+  margin: 20px 0;
 `;

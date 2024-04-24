@@ -1,6 +1,21 @@
 import styled from "styled-components";
 import { Swiper } from "swiper/react";
 
+interface SwiperWrapperProps {
+  isChefProfile?: boolean;
+}
+
+export const SwiperWrapper = styled.div<SwiperWrapperProps>`
+  width: 100%;
+  max-width: 95vw;
+  margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    width: ${(props) => (props.isChefProfile ? "725px" : "100%")};
+    height: ${(props) => (props.isChefProfile ? "432px" : "auto")};
+  }
+`;
+
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
   max-width: 95vw;
@@ -13,29 +28,32 @@ export const StyledSwiper = styled(Swiper)`
   }
 
   .swiper-slide {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     width: fit-content;
     flex-shrink: 0;
-    //border: 5px solid darkblue;
+    border: 5px solid darkblue;
     position: relative;
-  }
-
-  @media (max-width: 900px) {
-    margin-left: 20px;
-    margin-right: 0;
+  } */
   }
 `;
 
 export const CarouselContainer = styled.div`
-  justify-content: flex-start;
+  //display: flex;
+  //justify-content: flex-start;
+  max-width: auto;
   min-width: auto;
-  width: 100%;
+  //width: 100%;
   height: 100%;
-  padding-bottom: 40px;
   //border: 5px solid saddlebrown;
+  padding-left: 20px;
+  @media (min-width: 900px) {
+    //padding-left: 40px;
+    //justify-content: center;
+    align-self: center;
+  }
 `;
 
 export const ButtonSpacer = styled.div`
@@ -51,16 +69,13 @@ export const SwiperButtonNext = styled.button`
   letter-spacing: 2px;
   background: none;
   display: block;
-  position: absolute;
   padding-top: 20px;
-  left: 0;
+  padding-left: 0px;
   //border: 5px solid rebeccapurple;
 
-  @media (max-width: 900px) {
-    top: calc(80s% - 0px);
-  }
-
-  @media (min-width: 900px) {
+  @media (min-width: 1400px) {
+    //isplay: flex;
+    //justify-content: flex-end;
   }
 `;
 
@@ -79,5 +94,6 @@ export const Title = styled.h2`
     line-height: 35px;
     text-align: center;
     margin-bottom: 40px;
+    margin-right: 20px;
   }
 `;

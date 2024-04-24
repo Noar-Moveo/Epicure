@@ -6,17 +6,21 @@ import UserIcon from "../../assets/Icons/Person.png";
 import MenuIcon from "../../assets/Icons/Menu.png";
 import ExploreIcon from "../../assets/Icons/Explore.png";
 import OrderIcon from "../../assets/Icons/Order.png";
-import { placeholder_searchBar } from "../../resources.ts";
+import { placeholder_searchBar } from "../../data/resources.ts";
+import { menuOptions, menuItems } from "../../data/Menu.ts";
 
 function Hero() {
   const RESOURCES = {
     ICONS: [MenuIcon, ExploreIcon, UserIcon, OrderIcon],
   };
-  const menuOptions = ["Restaurants", "Chefs"];
 
   return (
     <>
-      <NevigationBar icons={RESOURCES.ICONS} menuOptions={menuOptions} />
+      <NevigationBar
+        icons={RESOURCES.ICONS}
+        menuOptions={menuOptions}
+        menuItems={menuItems}
+      />
       <HeaderContainer>
         <HeaderImg src={HeaderImage} alt="Header" />
         <SearchBar

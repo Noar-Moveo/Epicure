@@ -9,6 +9,11 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 245px;
+  height: Fixed (81px) px;
+  padding-top: 16px;
+  //padding-left: 16px;
+  gap: 10px;
 
   @media (min-width: 1400px) {
     padding: 24px 0;
@@ -24,7 +29,7 @@ export const Title = styled.h3`
   color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1400px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -39,7 +44,7 @@ export const Chef = styled.p`
 
   color: ${colors.black};
 
-  @media (min-width: 900px) {
+  @media (min-width: 1400px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 24px;
     font-weight: 200;

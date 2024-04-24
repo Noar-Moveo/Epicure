@@ -9,13 +9,15 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 245px;
+  height: 81px;
+  gap: 10px;
 
   @media (min-width: 1400px) {
     padding: 24px 0;
     align-items: center;
     width: 231px;
     height: 133px;
-    padding: 20px 0px 0px 0px;
   }
 `;
 
@@ -28,11 +30,11 @@ export const Title = styled.h3`
   letter-spacing: 2.6700000762939453px;
   text-align: left;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1400px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 30px;
     line-height: 47px;
     letter-spacing: 2.67px;
-    text-align: left;
+    text-align: center;
   }
 `;
