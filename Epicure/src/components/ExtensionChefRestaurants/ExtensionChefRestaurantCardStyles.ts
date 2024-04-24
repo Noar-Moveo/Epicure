@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import colors from "../../colors";
 
 export const Card = styled.div`
-  background: #f9f4ea;
+  background: ${colors.cream};
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,7 +21,7 @@ export const Card = styled.div`
 
 export const Title = styled.h3`
   margin: 0;
-  color: #333;
+  color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -30,7 +31,6 @@ export const Title = styled.h3`
   @media (min-width: 900px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 30px;
-    font-weight: 400;
     line-height: 47px;
     letter-spacing: 2.67px;
     text-align: left;

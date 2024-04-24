@@ -17,7 +17,7 @@ const ExtensionDishCard: React.FC<ExtensionDishCardProps> = ({
   <Card>
     <Title>{name}</Title>
     <Ingredients>{ingredients.join(", ")}</Ingredients>
-    <Icon src={SpicyIcon} alt="Spicy" /> <Price>${price}</Price>
+    <Icon src={SpicyIcon} alt="Spicy" /> <Price>₪{price}</Price>
   </Card>
 );
 

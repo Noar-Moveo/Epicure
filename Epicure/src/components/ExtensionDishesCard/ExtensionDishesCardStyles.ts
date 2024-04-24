@@ -77,6 +77,7 @@ export const Price = styled.div`
   letter-spacing: 1.9700000286102295px;
   text-align: left;
   order: 4;
+  position: relative;
   @media (min-width: 900px) {
     font-size: 24px;
     font-weight: 200;
@@ -84,16 +85,26 @@ export const Price = styled.div`
     line-height: 30px;
     letter-spacing: 1.9700000286102295px;
     margin-top: 35px;
-  }
-`;
 
-export const Line = styled.span`
-  flex-grow: 1;
-  background: ${colors.darkGray};
-  height: 0.5px;
-  align-self: center;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 112px;
+      height: 0.5px;
+      border: 0.5px 0px 0px 0px;
+      background-color: ${colors.darkGray};
+    }
 
-  @media (max-width: 899px) {
-    display: none;
+    &::before {
+      right: 100%;
+      margin-right: 10px;
+    }
+
+    &::after {
+      left: 100%;
+      margin-left: 10px;
+    }
   }
 `;
