@@ -2,16 +2,14 @@ import styled from "styled-components";
 import { Swiper } from "swiper/react";
 
 export const StyledSwiper = styled(Swiper)`
-  width: 120vh;
-  //padding-left: 20px;
-
-  //overflow: hidden;
-  //border: 5px solid darkblue;
+  width: 100%;
+  max-width: 95vw;
+  margin: 0 auto;
+  flex-shrink: 0;
 
   .swiper-wrapper {
     align-items: center;
     display: flex;
-    //border: 5px solid darkblue;
   }
 
   .swiper-slide {
@@ -19,57 +17,67 @@ export const StyledSwiper = styled(Swiper)`
     justify-content: center;
     align-items: center;
     height: auto;
-    //width: auto;
-    margin-right: 24px;
-    //border: 5px solid saddlebrown;
+    width: fit-content;
+    flex-shrink: 0;
+    //border: 5px solid darkblue;
+    position: relative;
+  }
+
+  @media (max-width: 900px) {
+    margin-left: 20px;
+    margin-right: 0;
   }
 `;
 
-// export const StyledSwiperSlide = styled.div`
-//   justify-content: center;
-//   align-items: center;
-// `;
 export const CarouselContainer = styled.div`
-  padding: 20px;
-  //border: 5px solid yellow;
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: auto;
-  gap: 24px;
-  justify-items: center;
+  justify-content: flex-start;
   min-width: auto;
-  //width: calc(100% - 40px);
   width: 100%;
   height: 100%;
+  padding-bottom: 40px;
+  //border: 5px solid saddlebrown;
+`;
+
+export const ButtonSpacer = styled.div`
+  height: 60px;
+  width: 100%;
 `;
 
 export const SwiperButtonNext = styled.button`
   font-size: 16px;
-  padding: 10px;
-  //position: absolute;
   font-weight: 400;
-  left: 20px;
-  top: calc(100% + 8.2px);
   cursor: pointer;
   font-family: Helvetica Neue;
   letter-spacing: 2px;
   background: none;
+  display: block;
+  position: absolute;
+  padding-top: 20px;
+  left: 0;
+  //border: 5px solid rebeccapurple;
 
-  @media (min-width: 1400px) {
-    right: 20px;
-    left: auto;
-    margin-top: 40px;
-    font-size: 24px;
-    //border: 5px solid darkblue;
+  @media (max-width: 900px) {
+    top: calc(80s% - 0px);
+  }
+
+  @media (min-width: 900px) {
   }
 `;
 
-// export const Title = styled.h2`
-//   font-family: $font;
-//   font-size: 30px;
-//   font-weight: 190;
-//   line-height: 40px;
-//   letter-spacing: 2px;
-//   text-align: center;
-// `;
+export const Title = styled.h2`
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 35px;
+  letter-spacing: 1.25px;
+  text-align: left;
+  margin-bottom: 17px;
+  //border: 5px solid pink;
+  padding-left: 28px;
+  @media (min-width: 900px) {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+`;

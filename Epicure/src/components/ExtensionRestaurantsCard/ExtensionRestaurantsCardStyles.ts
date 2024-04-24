@@ -1,14 +1,14 @@
 import styled from "styled-components";
+import colors from "../../colors";
 
 export const Card = styled.div`
-  background: #f9f4ea;
+  background: ${colors.cream};
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //width: 245px;
 
   @media (min-width: 1400px) {
     padding: 24px 0;
@@ -21,7 +21,7 @@ export const Card = styled.div`
 
 export const Title = styled.h3`
   margin: 0;
-  color: #333;
+  color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
 
   @media (min-width: 900px) {
@@ -37,7 +37,7 @@ export const Title = styled.h3`
 export const Chef = styled.p`
   font-family: "Helvetica Neue", Arial, sans-serif;
 
-  color: #666;
+  color: ${colors.black};
 
   @media (min-width: 900px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -46,5 +46,16 @@ export const Chef = styled.p`
     line-height: 30px;
     letter-spacing: 1.97px;
     text-align: left;
+  }
+`;
+
+export const Stars = styled.img`
+  width: 216px;
+  height: 40px;
+  align-self: center;
+  margin-top: 8px;
+
+  @media (max-width: 1399px) {
+    display: none;
   }
 `;

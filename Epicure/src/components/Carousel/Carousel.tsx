@@ -3,7 +3,8 @@ import {
   CarouselContainer,
   StyledSwiper,
   SwiperButtonNext,
-  //Title
+  Title,
+  ButtonSpacer,
 } from "./CarouselStyles";
 import { Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
@@ -17,11 +18,13 @@ import { CarouselProps } from "./CarouselTypes";
 function Carousel<T extends CardItem>({
   CardComponent,
   dataSelector,
+  title,
 }: CarouselProps<T>): JSX.Element {
   const dataItems = useSelector(dataSelector);
 
   return (
     <CarouselContainer>
+      <Title>{title}</Title>
       <StyledSwiper
         spaceBetween={24}
         slidesPerView={3}
@@ -62,6 +65,7 @@ function Carousel<T extends CardItem>({
         ))}
       </StyledSwiper>
       <SwiperButtonNext>All Restaurants {">>"}</SwiperButtonNext>
+      <ButtonSpacer />
     </CarouselContainer>
   );
 }

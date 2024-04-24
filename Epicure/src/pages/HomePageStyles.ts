@@ -6,6 +6,8 @@ export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  //padding: 20px;
-  //gap: 20px;
+  /* gap: 48px;
+  @media (min-width: 900px) {
+    gap: 80px;
+  } */
 `;

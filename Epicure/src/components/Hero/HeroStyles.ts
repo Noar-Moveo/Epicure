@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   width: 100%;
   position: relative;
+  //border: 5px solid saddlebrown;
 `;
 
 export const HeaderImg = styled.img`

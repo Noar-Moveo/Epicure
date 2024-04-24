@@ -2,15 +2,15 @@ import Carousel from "../Carousel/Carousel";
 import ExtensionDishCard from "../ExtensionDishesCard/ExtensionDishesCard";
 import { RootState } from "../../state/store";
 import { Dish } from "../../data/State/StateTypes";
-import { Title, SignatureDishesContainer } from "./SignatureDishesStyles";
+import { SignatureDishesContainer } from "./SignatureDishesStyles";
+import { title_SignatureDish } from "../../resources";
 
 const selectDishes = (state: RootState) => state.dishes.value;
-
 function SignatureDishes() {
   return (
     <SignatureDishesContainer>
-      <Title>Signature Dish Of:</Title>
       <Carousel<Dish>
+        title={title_SignatureDish}
         CardComponent={ExtensionDishCard}
         dataSelector={selectDishes}
       />

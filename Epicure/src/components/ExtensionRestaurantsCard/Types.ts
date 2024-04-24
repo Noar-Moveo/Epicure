@@ -1,4 +1,5 @@
 export interface ExtensionRestaurantCardProps {
-    name: string;
-    chef: string;
-  }
+  name: string;
+  chef: string;
+  starsImage?: string;
+}

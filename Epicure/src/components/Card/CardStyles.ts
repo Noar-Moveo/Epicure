@@ -1,4 +1,9 @@
 import styled from "styled-components";
+// import { CardProps, CardItem } from "./CardTypes";
+
+interface CardImageProps {
+  isChefProfile?: boolean;
+}
 
 export const CardContainer = styled.div`
   /* width: 245px;
@@ -13,12 +18,13 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardImage = styled.img`
-  //width: 100%;
+export const CardImage = styled.img<CardImageProps>`
   height: 152px;
   width: 245px;
+
   @media (min-width: 900px) {
-    width: 379px;
-    height: 236px;
+    width: ${(props) => (props.isChefProfile ? "231px" : "379px")};
+    height: ${(props) => (props.isChefProfile ? "224px" : "236px")};
+    opacity: ${(props) => (props.isChefProfile ? 0 : 1)};
   }
 `;

@@ -25,9 +25,9 @@ export interface Restaurant {
   name: string;
   chef: string;
   imageUrl: string;
+  starsImage?: string;
 }
 
 export interface RestaurantState {
   value: Restaurant[];
 }
-
