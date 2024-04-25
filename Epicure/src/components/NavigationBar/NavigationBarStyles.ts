@@ -8,7 +8,7 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-
+  //border: 5px solid darkblue;
   @media (max-width: 900px) {
     height: 46px;
   }
@@ -18,6 +18,10 @@ export const RightContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  //border: 5px solid saddlebrown;
+  @media (max-width: 900px) {
+    gap: 8px;
+  }
 `;
 
 export const StyledIcon = styled.div`
@@ -34,9 +38,9 @@ export const StyledIcon = styled.div`
 `;
 
 export const FirstStyledIcon = styled.div`
+//border: 5px solid pink;
   width: 24px;
   height: 24px;
-  margin-left: auto;
   cursor: pointer;
   transition: transform 0.1s ease;
 
@@ -47,19 +51,23 @@ export const FirstStyledIcon = styled.div`
     display: none;
   }
 `;
-
 export const CenteredContainer = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 0px;
+  //border: 5px solid firebrick;
 
-  @media (max-width: 899px) {
+  @media (max-width: 900px) {
     justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 901px) {
     justify-content: flex-start;
   }
 
@@ -69,22 +77,25 @@ export const CenteredContainer = styled.div`
     padding: 0px;
   }
 
-  .epicure-title {
-    margin-left: 1px;
-    font-family: Helvetica Neue;
-    font-size: 27px;
-    font-weight: 200;
-    line-height: 32.64px;
-    letter-spacing: 1.350000023841858px;
-    text-align: left;
-    display: none;
+   .epicure-title {
+     margin-left: 1px;
+     font-family: Helvetica Neue;
+     font-size: 27px;
+     font-weight: 200;
+     line-height: 32.64px;
+     letter-spacing: 1.350000023841858px;
+     text-align: left;
+     display: none;
 
-    @media (min-width: 900px) {
-      display: block;
-      margin-left: 32px;
-    }
-  }
+     @media (min-width: 900px) {
+       display: block;
+       margin-left: 32px;
+     }
+   }
 `;
+
+
+
 
 export const MenuOption = styled.div`
   margin-left: 32px;
@@ -144,4 +155,64 @@ export const DropdownSeparator = styled.hr`
   height: 1px;
   background-color: ${colors.middleGray};
   margin: 20px 0;
+`;
+
+export const Modal = styled.div`
+  position: fixed;
+  top: 205px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 413px;
+  background-color: ${colors.white};
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  //border: 5px solid rebeccapurple;
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  align-self: flex-start;
+  border: 1px;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 21.76px;
+`;
+
+export const OrderIconPopover = styled.div`
+  position: fixed;
+  top: 155px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 218px;
+  background-color: ${colors.white};
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  //border: 5px solid rebeccapurple;
+`;
+export const IconContainer = styled.div`
+  width: 44.92px;
+  height: 44.92px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Title = styled.div`
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  text-align: center;
+  color: ${colors.black};
 `;

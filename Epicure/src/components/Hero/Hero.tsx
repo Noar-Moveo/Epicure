@@ -1,16 +1,16 @@
-import NevigationBar from "../NavigationBar/NavigationBar.tsx";
+import NavigationBar from "../NavigationBar/NavigationBar.tsx";
 import HeaderImage from "../../assets/Images/Header.png";
 import { HeaderContainer, HeaderImg } from "./HeroStyles.ts";
 import SearchBar from "../SearchBar/SearchBar.tsx";
 import { placeholder_searchBar } from "../../data/resources.ts";
 import { menuOptions, menuItems } from "../../data/Menu.ts";
 import { icons } from "../../data/Menu.ts";
+import { SearchTitle } from "../../data/resources";
 
 function Hero() {
-
   return (
     <>
-      <NevigationBar
+      <NavigationBar
         icons={icons}
         menuOptions={menuOptions}
         menuItems={menuItems}
@@ -20,6 +20,7 @@ function Hero() {
         <SearchBar
           placeholder={placeholder_searchBar}
           icon={icons[1]}
+          title={SearchTitle}
         />
       </HeaderContainer>
     </>

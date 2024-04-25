@@ -9,9 +9,16 @@ import {
   DropdownContainer,
   DropdownSeparator,
   DropdownItem,
+  Modal,
+  CloseButton,
+  IconContainer,
+  OrderIconPopover,
+  Title,
 } from "./NavigationBarStyles";
 import Logo from "../../assets/Icons/about-logo@3x 1.png";
 import { NavigationBarProps } from "./Types";
+import SearchBar from "../SearchBar/SearchBar";
+import { searchTitleIcon, placeholder_searchBar, orderIconTitle } from "../../data/resources";
 
 const NavigationBar: React.FC<NavigationBarProps> = ({
   icons,
@@ -19,6 +26,8 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
   menuItems,
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const [isOrderPopoverOpen, setIsOrderPopoverOpen] = useState(false); // Add state for order icon popover
 
   const toggleDropdown = () => {
     console.log("Toggle dropdown");
@@ -27,12 +36,20 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
 
   const handleIconClick = (index: number) => {
     console.log(`Icon ${index} clicked`);
+    if (index === 0) {
+      setIsSearchModalOpen(true);
+    } else if (index === 2) {
+      setIsOrderPopoverOpen(!isOrderPopoverOpen);
+    }
   };
 
   const closeDropdown = () => {
     console.log("Close dropdown");
     setIsDropdownOpen(false);
   };
+
+  const closeSearchModal = () => setIsSearchModalOpen(false);
+
   const slicedIcons = icons.slice(1);
   const rightIcons = slicedIcons.map((icon, index) => (
     <StyledIcon key={index} onClick={() => handleIconClick(index)}>
@@ -63,6 +80,24 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
             ))}
           </DropdownMenu>
         </DropdownContainer>
+      )}
+      {isSearchModalOpen && (
+        <Modal>
+          <CloseButton onClick={closeSearchModal}>X</CloseButton>
+          <SearchBar
+            placeholder={placeholder_searchBar}
+            icon={icons[1]}
+            title={searchTitleIcon}
+          />
+        </Modal>
+      )}
+      {isOrderPopoverOpen && (
+        <OrderIconPopover>
+          <IconContainer>
+            <img src={icons[3]} alt="Order Icon" />
+          </IconContainer>
+          <Title>{orderIconTitle}</Title>
+        </OrderIconPopover>
       )}
     </NavigationContainer>
   );

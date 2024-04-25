@@ -43,7 +43,7 @@ export const Title = styled.h2`
   align-self: flex-start;
   margin-bottom: 17px;
   //border: 5px solid pink;
-  padding-left: 20px;
+  padding-left: 30px;
   @media (min-width: 900px) {
     font-size: 30px;
     line-height: 35px;
