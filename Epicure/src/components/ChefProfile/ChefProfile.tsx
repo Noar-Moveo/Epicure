@@ -19,6 +19,8 @@ import {
   title_chefRestaurants,
 } from "../../data/resources";
 import ChefPicture from "../../assets/Images/YosiChef.png";
+import { Fade } from 'react-awesome-reveal';
+
 
 const selectYossiShitritRestaurants = (state: RootState) =>
   state.restaurants.value.filter(
@@ -32,10 +34,12 @@ const ChefProfile = () => {
     <ChefProfileContainer>
       <Title> {ChefOfWeek} </Title>
       <ChefInfoContainer>
+      <Fade >
         <CardImageContainer>
           <CardImage src={ChefPicture} alt="Chef Yossi Shitrit" />
           <NameOnImage>Yossi Shitrit</NameOnImage>
         </CardImageContainer>
+        </Fade>
         <ChefBio> {ChefBioText}</ChefBio>
       </ChefInfoContainer>
       <CaoruselChef>

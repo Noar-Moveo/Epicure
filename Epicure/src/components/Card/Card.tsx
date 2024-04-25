@@ -1,5 +1,7 @@
 import { CardContainer, CardImage } from "./CardStyles";
 import { CardItem, CardProps } from "./CardTypes";
+import { Fade } from 'react-awesome-reveal';
+
 
 function Card<T extends CardItem>({
   item,
@@ -8,6 +10,7 @@ function Card<T extends CardItem>({
 }: CardProps<T>): JSX.Element {
   console.log(isChefProfile);
   return (
+    <Fade >
     <CardContainer>
       <CardImage
         src={item.imageUrl}
@@ -16,6 +19,7 @@ function Card<T extends CardItem>({
       />
       <Component {...item} />
     </CardContainer>
+    </Fade>
   );
 }
 

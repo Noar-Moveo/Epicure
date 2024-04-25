@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../colors";
+import colors from "../../data/colors";
 
 export const MidFooterContainer = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const MidFooterContainer = styled.div`
 export const FooterContainer = styled.div`
   width: 100%;
   background: ${colors.lightGray};
-  margin-top: 20px;
+  //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: column;
@@ -29,9 +29,7 @@ export const SepContainer = styled.div`
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: row;
-    //align-items: flex-start;
     justify-content: space-between;
-    gap: 30px;
   }
 `;
 
@@ -61,7 +59,6 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   width: 102px;
   height: 95px;
-  //padding: 10px;
   @media (min-width: 1200px) {
     position: static;
     left: 1133px;

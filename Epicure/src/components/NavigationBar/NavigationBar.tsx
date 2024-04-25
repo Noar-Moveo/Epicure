@@ -5,7 +5,6 @@ import {
   FirstStyledIcon,
   RightContainer,
   CenteredContainer,
-  //MenuOption,
   DropdownMenu,
   DropdownContainer,
   DropdownSeparator,
@@ -29,6 +28,11 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
   const handleIconClick = (index: number) => {
     console.log(`Icon ${index} clicked`);
   };
+
+  const closeDropdown = () => {
+    console.log("Close dropdown");
+    setIsDropdownOpen(false);
+  };
   const slicedIcons = icons.slice(1);
   const rightIcons = slicedIcons.map((icon, index) => (
     <StyledIcon key={index} onClick={() => handleIconClick(index)}>
@@ -49,8 +53,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
       {isDropdownOpen && (
         <DropdownContainer>
           <DropdownMenu>
+            <DropdownItem onClick={closeDropdown}>X</DropdownItem>
             {menuOptions.map((option, index) => (
-              <DropdownItem key={index}>{option}</DropdownItem>
+              <DropdownItem key={index}>{option} </DropdownItem>
             ))}
             <DropdownSeparator />
             {menuItems.map((item, index) => (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../colors";
+import colors from "../../data/colors";
 
 export const SearchContainer1 = styled.div`
   position: absolute;
@@ -25,11 +25,6 @@ export const SearchContainer1 = styled.div`
   }
 `;
 
-// Weight
-// 200
-// Size
-// 32px
-
 export const TextSearch1 = styled.div`
   font-family: Helvetica Neue;
   font-size: 22px;
@@ -37,7 +32,7 @@ export const TextSearch1 = styled.div`
   line-height: 32px;
   letter-spacing: 1.97px;
   text-align: center;
-  margin-top: 0px; 
+  margin-top: 0px;
   font-weight: 300;
   //border: 5px solid firebrick;
   @media (min-width: 900px) {
@@ -66,14 +61,12 @@ export const SearchBar1 = styled.input`
     width: 505px;
     height: 48px;
     ::placeholder {
-    color: ${colors.black};
-    font-size: 34px;
-    font-weight: 200;
-  }
+      color: ${colors.black};
+      font-size: 34px;
+      font-weight: 200;
+    }
   }
 `;
-
-
 
 export const InputContainer = styled.div<{ icon: string }>`
   width: 315px;
@@ -85,7 +78,7 @@ export const InputContainer = styled.div<{ icon: string }>`
   display: flex;
   align-items: center;
   position: absolute;
-  margin-top: 125px; 
+  margin-top: 125px;
   //border: 5px solid pink;
   @media (min-width: 900px) {
     width: 505px;

@@ -7,3 +7,7 @@ export interface CardProps<T> {
 }
 
 export type CardItem = Dish | Restaurant | Chef;
+
+export interface CardImageProps {
+  isChefProfile?: boolean;
+}

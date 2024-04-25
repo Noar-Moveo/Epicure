@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../colors";
+import colors from "../../data/colors";
 
 export const Card = styled.div`
   background: ${colors.cream};
@@ -13,7 +13,7 @@ export const Card = styled.div`
   padding-top: 16px;
   padding-left: 16px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     width: 380px;
     height: 348px;
     align-items: center;
@@ -26,7 +26,7 @@ export const Title = styled.h3`
   font-family: "Helvetica Neue", Arial, sans-serif;
   order: 1;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -45,7 +45,7 @@ export const Ingredients = styled.p`
   margin-top: 8px;
   order: 2;
   //border: 4px solid dodgerblue;
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     text-align: center;
     width: 295px;
     height: 123px;
@@ -59,7 +59,7 @@ export const Icon = styled.img`
   height: 22.98px;
   margin: 12px 0;
   order: 3;
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     width: 39.76;
     height: 29.68px;
     align-items: center;
@@ -78,7 +78,7 @@ export const Price = styled.div`
   text-align: left;
   order: 4;
   position: relative;
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     font-size: 24px;
     font-weight: 200;
     margin: 0 8px;

@@ -9,3 +9,4 @@ export const title_SignatureDish = "Signature Dish Of:";
 export const title_IconIndicator = "Meaning of Our Icons:";
 export const DescriptionTest =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna sodales porta. Vivamus elit urna, dignissim a vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros.";
+export const SearchTitle = "Epicure works with the top chef restaurants in Tel Aviv";

@@ -13,9 +13,11 @@ import Card from "../Card/Card";
 import { CardItem } from "../Card/CardTypes";
 import "swiper/css";
 import "swiper/css/navigation";
-//import "swiper/css/pagination";
 import { CarouselProps } from "./CarouselTypes";
 import { BREAKPOINTS } from "../../data/BreakPoints";
+import { Fade } from 'react-awesome-reveal';
+
+
 
 function Carousel<T extends CardItem>({
   CardComponent,
@@ -27,8 +29,9 @@ function Carousel<T extends CardItem>({
 
   return (
     <CarouselContainer>
-      <Title>{title}</Title>
+      <Title isChefProfile={isChefProfile}>{title}</Title>
       <SwiperWrapper isChefProfile={isChefProfile}>
+      <Fade >
         <StyledSwiper
           spaceBetween={24}
           slidesPerView={3}
@@ -47,8 +50,11 @@ function Carousel<T extends CardItem>({
             </SwiperSlide>
           ))}
         </StyledSwiper>
+        </Fade>
       </SwiperWrapper>
-      <SwiperButtonNext>All Restaurants {">>"}</SwiperButtonNext>
+      {!isChefProfile && (
+        <SwiperButtonNext>All Restaurants {">>"}</SwiperButtonNext>
+      )}
       <ButtonSpacer />
     </CarouselContainer>
   );

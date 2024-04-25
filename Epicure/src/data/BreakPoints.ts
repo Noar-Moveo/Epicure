@@ -1,10 +1,14 @@
 export const BREAKPOINTS = {
-  375: {
+  370: {
     slidesPerView: 1.3,
     spaceBetween: 24,
   },
   400: {
     slidesPerView: 1.5,
+    spaceBetween: 24,
+  },
+  500: {
+    slidesPerView: 2,
     spaceBetween: 24,
   },
   576: {

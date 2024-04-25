@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../colors";
+import colors from "../../data/colors";
 
 export const Card = styled.div`
   background: ${colors.cream};
@@ -12,10 +12,9 @@ export const Card = styled.div`
   width: 245px;
   height: Fixed (81px) px;
   padding-top: 16px;
-  //padding-left: 16px;
   gap: 10px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     padding: 24px 0;
     height: 169px;
     align-items: center;
@@ -29,7 +28,7 @@ export const Title = styled.h3`
   color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -44,7 +43,7 @@ export const Chef = styled.p`
 
   color: ${colors.black};
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 24px;
     font-weight: 200;
@@ -60,7 +59,7 @@ export const Stars = styled.img`
   align-self: center;
   margin-top: 8px;
 
-  @media (max-width: 1399px) {
+  @media (max-width: 1199px) {
     display: none;
   }
 `;

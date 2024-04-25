@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../data/colors";
 
 export const NavigationContainer = styled.div`
   height: 64px;
@@ -25,9 +26,10 @@ export const StyledIcon = styled.div`
   margin-left: 20px;
   cursor: pointer;
   transition: transform 0.1s ease;
-
-  &:hover {
-    transform: scale(1.1);
+  @media (min-width: 900px) {
+    &:hover {
+      transform: scale(1.4);
+    }
   }
 `;
 
@@ -106,9 +108,9 @@ export const MenuOption = styled.div`
 export const DropdownContainer = styled.div`
   position: absolute;
   width: 100%;
-  top: 45px;
+  top: 0px;
   left: 0;
-  background-color: white;
+  background-color: ${colors.white};
   z-index: 100;
   //border: 5px solid saddlebrown;
 `;
@@ -120,7 +122,6 @@ export const DropdownMenu = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border-top: 1px solid gray;
   //border: 5px solid saddlebrown;
 `;
 
@@ -134,14 +135,13 @@ export const DropdownItem = styled.div`
   text-align: left;
   width: 100%;
   &:hover {
-    background-color: #f2f2f2;
+    background-color: ${colors.middleGray};
   }
 `;
 
 export const DropdownSeparator = styled.hr`
   width: 90%;
-  border: 0;
   height: 1px;
-  background-color: #f2f2f2;
+  background-color: ${colors.middleGray};
   margin: 20px 0;
 `;
