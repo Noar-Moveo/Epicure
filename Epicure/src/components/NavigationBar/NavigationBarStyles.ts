@@ -38,7 +38,6 @@ export const StyledIcon = styled.div`
 `;
 
 export const FirstStyledIcon = styled.div`
-//border: 5px solid pink;
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -51,6 +50,9 @@ export const FirstStyledIcon = styled.div`
     display: none;
   }
 `;
+
+
+
 export const CenteredContainer = styled.div`
   flex: 1;
   display: flex;
@@ -59,15 +61,16 @@ export const CenteredContainer = styled.div`
   padding-left: 0px;
   //border: 5px solid firebrick;
 
-  @media (max-width: 900px) {
-    justify-content: center;
+  @media (max-width: 899px) {
+    justify-content: center; 
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
   }
 
-  @media (min-width: 901px) {
+   
+
+  @media (min-width: 900px) {
     justify-content: flex-start;
   }
 
@@ -77,22 +80,23 @@ export const CenteredContainer = styled.div`
     padding: 0px;
   }
 
-   .epicure-title {
-     margin-left: 1px;
-     font-family: Helvetica Neue;
-     font-size: 27px;
-     font-weight: 200;
-     line-height: 32.64px;
-     letter-spacing: 1.350000023841858px;
-     text-align: left;
-     display: none;
+  .epicure-title {
+    margin-left: 1px;
+    font-family: Helvetica Neue;
+    font-size: 27px;
+    font-weight: 200;
+    line-height: 32.64px;
+    letter-spacing: 1.350000023841858px;
+    text-align: left;
+    display: none;
 
-     @media (min-width: 900px) {
-       display: block;
-       margin-left: 32px;
-     }
-   }
+    @media (min-width: 900px) {
+      display: block;
+      margin-left: 32px;
+    }
+  }
 `;
+
 
 
 
