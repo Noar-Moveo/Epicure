@@ -5,8 +5,12 @@ export interface CarouselProps<T> {
   dataSelector: (state: RootState) => T[];
   title?: string;
   isChefProfile?: boolean;
+  isVisible?: boolean;
 }
 
 export interface SwiperWrapperProps {
   isChefProfile?: boolean;
+}
+export interface SwiperWrapperProps_ {
+  isVisible?: boolean;
 }

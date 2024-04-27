@@ -13,6 +13,7 @@ function PopularRestaurants() {
         title={title_PopularRestaurants}
         CardComponent={ExtensionRestaurantCard}
         dataSelector={selectRestaurants}
+        isVisible={true}
       />
     </PopularRestaurantsContainer>
   );

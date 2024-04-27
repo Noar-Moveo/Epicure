@@ -8,9 +8,15 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  padding-bottom: 23px;
+  padding-left: 127px;
+  padding-right: 127px;
   //border: 5px solid darkblue;
   @media (max-width: 900px) {
     height: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 23px;
   }
 `;
 
@@ -18,6 +24,8 @@ export const RightContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
   //border: 5px solid saddlebrown;
   @media (max-width: 900px) {
     gap: 8px;
@@ -25,9 +33,10 @@ export const RightContainer = styled.div`
 `;
 
 export const StyledIcon = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-left: 20px;
+  //justify-content: center;
   cursor: pointer;
   transition: transform 0.1s ease;
   @media (min-width: 900px) {
@@ -51,8 +60,6 @@ export const FirstStyledIcon = styled.div`
   }
 `;
 
-
-
 export const CenteredContainer = styled.div`
   flex: 1;
   display: flex;
@@ -62,13 +69,11 @@ export const CenteredContainer = styled.div`
   //border: 5px solid firebrick;
 
   @media (max-width: 899px) {
-    justify-content: center; 
+    justify-content: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
-
-   
 
   @media (min-width: 900px) {
     justify-content: flex-start;
@@ -96,10 +101,6 @@ export const CenteredContainer = styled.div`
     }
   }
 `;
-
-
-
-
 
 export const MenuOption = styled.div`
   margin-left: 32px;
@@ -137,12 +138,15 @@ export const DropdownMenu = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  //gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   //border: 5px solid saddlebrown;
 `;
 
 export const DropdownItem = styled.div`
   font-family: Helvetica Neue;
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 18px;
   font-weight: 200;
   line-height: 21.76px;
@@ -161,8 +165,8 @@ export const DropdownSeparator = styled.hr`
   margin: 20px 0;
 `;
 
-export const Modal = styled.div`
-  position: fixed;
+export const SearchToggle = styled.div`
+  position: absolute;
   top: 205px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -173,6 +177,8 @@ export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  padding: 20px;
+
   //border: 5px solid rebeccapurple;
 `;
 
@@ -186,13 +192,13 @@ export const CloseButton = styled.button`
   font-size: 18px;
   font-weight: 200;
   line-height: 21.76px;
+  z-index: 100;
 `;
-
-export const OrderIconPopover = styled.div`
-  position: fixed;
-  top: 155px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+export const OrderIconContainer = styled.div`
+  position: absolute;
+  //position: fixed;
+  top: 45px;
+  left: 0%;
   width: 100%;
   height: 218px;
   background-color: ${colors.white};
@@ -203,8 +209,25 @@ export const OrderIconPopover = styled.div`
   justify-content: center;
   gap: 20px;
   align-items: center;
-  //border: 5px solid rebeccapurple;
+  //border: 5px solid darkblue;
+  /* @media (min-width: 900px) {
+    top: 60px;
+  } */
+  @media (min-width: 1400px) {
+    //margin-left: 1023px;
+    //justify-content: end;
+    //position: fixed;
+    //padding-right: 0px;
+    top: 60px;
+    width: 497px;
+    height: 586px;
+    //position: sticky;
+    gap: 38px;
+    left: auto;
+    right: 0px;
+  }
 `;
+
 export const IconContainer = styled.div`
   width: 44.92px;
   height: 44.92px;
@@ -214,9 +237,30 @@ export const IconContainer = styled.div`
 
 export const Title = styled.div`
   font-family: Helvetica Neue;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 200;
   line-height: 16.8px;
   text-align: center;
   color: ${colors.black};
+`;
+
+export const OrderHistoryButton = styled.button`
+  width: 206px;
+  height: 48px;
+  border: 1px solid;
+  background-color: transparent;
+  font-family: Helvetica Neue;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 24px;
+  text-align: center;
+  color: ${colors.black};
+  margin-top: 60px;
+  cursor: pointer;
+  &:hover {
+    border-color: ${colors.black};
+  }
+  @media (max-width: 1400px) {
+    display: none;
+  }
 `;

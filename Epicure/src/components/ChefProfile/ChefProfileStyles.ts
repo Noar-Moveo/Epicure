@@ -1,50 +1,62 @@
 import styled from "styled-components";
 import colors from "../../data/colors";
 
-export const ChefProfileContainer = styled.div`
+
+export const ChefProfileContainer = styled.section`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  align-items: center;
+  margin-top: 88px;
   //border: 5px solid red;
-  padding-bottom: 1150px;
-  @media (max-width: 1200px) {
-    padding-bottom: 1030px;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1200px) {
+    margin-top: 80px;
+    align-items: center;
+    padding-left: 127px;
+    padding-right: 127px;
+    align-self: center;
   }
 `;
 
+
 export const ChefBio = styled.p`
   padding-top: 20px;
-  width: 335px;
-  height: 252px;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 200;
   line-height: 28px;
   letter-spacing: 1.25px;
   text-align: justify;
-  margin-bottom: 52px;
-  @media (min-width: 1200px) {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: 1300px) {
+    padding-top: 0px;
     width: 642px;
     height: 255px;
     font-size: 24px;
     line-height: 35px;
   }
 `;
-
 export const Title = styled.h2`
+position: absolute;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 200;
   line-height: 35px;
   letter-spacing: 1.25px;
   align-self: flex-start;
-  margin-bottom: 17px;
+  left: 50%;
+  transform: translateX(-166px);
+  margin-bottom: 1000px;
+  //margin-bottom: 17px;
   //border: 5px solid pink;
-  padding-left: 30px;
+  //padding-left: 28px;
   @media (min-width: 900px) {
+   position: relative;
+   transform: translateX(0);
+
+   left: 0%;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
@@ -53,16 +65,25 @@ export const Title = styled.h2`
   }
 `;
 
+
 export const ChefInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 335px;
+  height: auto;
+  //width: 100%;
   justify-content: center;
   //border: 5px solid pink;
   align-items: center;
+  margin-bottom: 48px;
+  //padding-bottom: 32px;
+
   @media (min-width: 900px) {
+    width: auto;
     flex-direction: row;
-    padding-bottom: 60px;
+    padding-bottom: 45px;
+    justify-content: center;
+    //margin-top: ;
   }
 `;
 
@@ -72,7 +93,7 @@ export const CardImageContainer = styled.div`
   width: 335px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
   //border: 5px solid darkblue;
   @media (min-width: 900px) {
     height: 372px;
@@ -82,7 +103,7 @@ export const CardImageContainer = styled.div`
 `;
 
 export const CardImage = styled.img`
-  height: 262px;
+  height: auto;
   width: 335px;
   object-fit: cover;
   filter: grayscale(100%);
@@ -91,12 +112,19 @@ export const CardImage = styled.img`
     width: 478px;
   }
 `;
+// font-family: Helvetica Neue;
+// font-size: 18px;
+// font-weight: 400;
+// line-height: 47px;
+// letter-spacing: 2.6700000762939453px;
+// text-align: center;
 
 export const NameOnImage = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 51px;
+  //border: 5px solid darkblue;
   background: ${colors.white}cc;
   display: flex;
   justify-content: center;
@@ -104,16 +132,9 @@ export const NameOnImage = styled.div`
   color: ${colors.black};
   font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
-  font-weight: 400px;
+  letter-spacing: 2.67px;
+  font-weight: 400;
   text-align: center;
 `;
 
-export const CaoruselChef = styled.div`
-  @media (min-width: 1200px) {
-    height: 472px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 145px;
-  }
-`;
+

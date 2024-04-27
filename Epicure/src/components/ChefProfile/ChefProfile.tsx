@@ -11,7 +11,6 @@ import {
   NameOnImage,
   CardImageContainer,
   ChefInfoContainer,
-  CaoruselChef,
 } from "./ChefProfileStyles";
 import {
   ChefOfWeek,
@@ -30,6 +29,7 @@ const selectYossiShitritRestaurants = (state: RootState) =>
 const ChefProfile = () => {
   const restaurants = useSelector(selectYossiShitritRestaurants);
 
+
   return (
     <ChefProfileContainer>
       <Title> {ChefOfWeek} </Title>
@@ -42,14 +42,12 @@ const ChefProfile = () => {
         </Fade>
         <ChefBio> {ChefBioText}</ChefBio>
       </ChefInfoContainer>
-      <CaoruselChef>
         <Carousel<Restaurant>
           title={title_chefRestaurants}
           CardComponent={(props) => <ExtensionChefRestaurantCard {...props} />}
           dataSelector={() => restaurants}
-          isChefProfile={true}
+           isChefProfile={true}
         />
-      </CaoruselChef>
     </ChefProfileContainer>
   );
 };

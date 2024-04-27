@@ -18,6 +18,7 @@ export const SearchContainer1 = styled.div`
   padding: 10px;
   padding-top: 16px;
   padding-bottom: 64px;
+  //border: 5px solid red;
 
   @media (max-width: 900px) {
     width: 335px;
@@ -39,7 +40,9 @@ export const TextSearch1 = styled.div`
     width: 452px;
     height: 80px;
     font-size: 32px;
-    font-weight: 200;
+    letter-spacing: 1.97px;
+    line-height: 36px;
+    margin-bottom: 20px;
   }
 `;
 

@@ -9,16 +9,21 @@ import {
   DropdownContainer,
   DropdownSeparator,
   DropdownItem,
-  Modal,
+  SearchToggle,
   CloseButton,
   IconContainer,
-  OrderIconPopover,
+  OrderIconContainer,
   Title,
+  OrderHistoryButton,
 } from "./NavigationBarStyles";
 import Logo from "../../assets/Icons/about-logo@3x 1.png";
 import { NavigationBarProps } from "./Types";
 import SearchBar from "../SearchBar/SearchBar";
-import { searchTitleIcon, placeholder_searchBar, orderIconTitle } from "../../data/resources";
+import {
+  searchTitleIcon,
+  placeholder_searchBar,
+  orderIconTitle,
+} from "../../data/resources";
 
 const NavigationBar: React.FC<NavigationBarProps> = ({
   icons,
@@ -27,19 +32,25 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
-  const [isOrderPopoverOpen, setIsOrderPopoverOpen] = useState(false); // Add state for order icon popover
+  const [isOrderPopoverOpen, setIsOrderPopoverOpen] = useState(false);
 
   const toggleDropdown = () => {
     console.log("Toggle dropdown");
     setIsDropdownOpen(!isDropdownOpen);
+    setIsOrderPopoverOpen(false);
+    setIsSearchModalOpen(false);
   };
 
   const handleIconClick = (index: number) => {
     console.log(`Icon ${index} clicked`);
     if (index === 0) {
       setIsSearchModalOpen(true);
+      setIsOrderPopoverOpen(false);
+      setIsDropdownOpen(false);
     } else if (index === 2) {
       setIsOrderPopoverOpen(!isOrderPopoverOpen);
+      setIsSearchModalOpen(false);
+      setIsDropdownOpen(false);
     }
   };
 
@@ -82,22 +93,24 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
         </DropdownContainer>
       )}
       {isSearchModalOpen && (
-        <Modal>
+        <SearchToggle>
           <CloseButton onClick={closeSearchModal}>X</CloseButton>
           <SearchBar
             placeholder={placeholder_searchBar}
             icon={icons[1]}
             title={searchTitleIcon}
+            withinNavigationBar={true}
           />
-        </Modal>
+        </SearchToggle>
       )}
       {isOrderPopoverOpen && (
-        <OrderIconPopover>
+        <OrderIconContainer>
           <IconContainer>
             <img src={icons[3]} alt="Order Icon" />
           </IconContainer>
           <Title>{orderIconTitle}</Title>
-        </OrderIconPopover>
+          <OrderHistoryButton>ORDER HISTORY</OrderHistoryButton>
+        </OrderIconContainer>
       )}
     </NavigationContainer>
   );

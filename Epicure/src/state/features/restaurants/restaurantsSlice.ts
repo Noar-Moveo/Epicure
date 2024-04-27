@@ -33,9 +33,9 @@ const initialState: RestaurantState = {
       imageUrl: Img3,
       starsImage: Stars3,
     },
-    { id: "4", name: "Onza", chef: "Yossi Shitrit", imageUrl: Img4 },
-    { id: "5", name: "Kitchen Market", chef: "Yossi Shitrit", imageUrl: Img5 },
-    { id: "6", name: "Mashya", chef: "Yossi Shitrit", imageUrl: Img6 },
+    { id: "4", name: "Onza", chef: "Yossi Shitrit", imageUrl: Img4, starsImage: Stars1, },
+    { id: "5", name: "Kitchen Market", chef: "Yossi Shitrit", imageUrl: Img5, starsImage: Stars2, },
+    { id: "6", name: "Mashya", chef: "Yossi Shitrit", imageUrl: Img6, starsImage: Stars3, },
   ],
 };
 

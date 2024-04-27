@@ -7,21 +7,26 @@ export const MidFooterContainer = styled.div`
   align-items: flex-start;
   gap: 30px;
   padding: 20px;
+  //margin-top: 48px;
+
   @media (min-width: 1200px) {
     width: 100%;
     padding-left: 132px;
     margin-bottom: 0;
+   // margin-top: 80px;
   }
 `;
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.section`
   width: 100%;
   background: ${colors.lightGray};
   //border: 5px solid darkblue;
+  margin-top: 78px;
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 80px;
   }
 `;
 
@@ -59,9 +64,9 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   width: 102px;
   height: 95px;
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     position: static;
-    left: 1133px;
+    left: 11 33px;
     order: 4;
     width: 178.22px;
     height: 166px;
@@ -73,9 +78,12 @@ export const DownLoadContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: 10px;
+  //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     order: 3;
+    flex-direction: row;
+    gap: 16px;
   }
 `;
 
@@ -100,7 +108,9 @@ export const Title = styled.h3`
   line-height: 35px;
   letter-spacing: 1.25px;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 30px;
+  //border: 5px solid darkblue;
+  padding-bottom: 25px;
   @media (min-width: 1200px) {
     font-size: 30px;
     order: 1;
@@ -131,8 +141,10 @@ export const MenuContainer = styled.div`
   height: 202px;
   background: ${colors.white};
   margin-top: 20px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
   justify-content: space-between;
   @media (min-width: 1200px) {
     flex-direction: row;
@@ -144,6 +156,9 @@ export const MenuContainer = styled.div`
     padding: 20px;
   }
 `;
+
+
+
 export const MenuItem = styled.button`
   font-family: Helvetica Neue;
   font-size: 18px;
@@ -153,8 +168,13 @@ export const MenuItem = styled.button`
   text-align: left;
   background-color: transparent;
   cursor: pointer;
+  //border: 5px solid saddlebrown;
 
   &:hover {
     text-decoration: underline;
+  }
+  @media (max-width: 1200px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 `;

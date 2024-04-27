@@ -23,24 +23,28 @@ export const Card = styled.div`
   }
 `;
 
+
 export const Title = styled.h3`
   margin: 0;
   color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
-
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.47px;
+  letter-spacing: 2.6700000762939453px;
+  text-align: left;
   @media (min-width: 1200px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: 400;
     line-height: 47px;
-    letter-spacing: 2.67px;
-    text-align: left;
   }
 `;
 
 export const Chef = styled.p`
   font-family: "Helvetica Neue", Arial, sans-serif;
-
+  font-size: 16px;
+  font-weight: 200;
   color: ${colors.black};
 
   @media (min-width: 1200px) {
@@ -63,3 +67,5 @@ export const Stars = styled.img`
     display: none;
   }
 `;
+
+

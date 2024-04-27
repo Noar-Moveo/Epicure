@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../../data/colors";
 
-export const IconIndicatorContainer = styled.div`
+export const IconIndicatorContainer = styled.section`
   width: 100%;
   left: -1px;
   gap: 0px;
@@ -10,11 +10,14 @@ export const IconIndicatorContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  margin-top: 78px;
   //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     gap: 30px;
+    margin-top: 80px;
   }
 `;
+
 
 export const Title = styled.h3`
   font-family: Helvetica Neue;
@@ -22,7 +25,7 @@ export const Title = styled.h3`
   font-weight: 200;
   line-height: 35px;
   letter-spacing: 1.25px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   @media (min-width: 1200px) {
     font-size: 30px;
   }
@@ -49,7 +52,7 @@ export const IconContainer = styled.div`
 `;
 
 export const Icon = styled.img`
-  width: 77.42px;
+  width: auto;
   height: 60px;
   margin-right: 10px;
   @media (min-width: 1200px) {
