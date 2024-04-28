@@ -30,7 +30,7 @@ const initialState: DishesState = {
       name: 'Smoked Pizza',
       price: 65,
       ingredients: [
-        'Basil dough', 'cashew butter', 'demi-glace', 'bison', 'radish'
+        'Basil dough', 'cashew "butter"', 'demi-glace', 'bison & radish'
       ],
       imageUrl: Dish3
     },

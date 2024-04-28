@@ -86,13 +86,6 @@ export const AllRestaurantsButton = styled.button<SwiperWrapperProps_>`
     margin-top: 40px;
   }
 `;
-// font-size: 24px;
-// font-weight: 400;
-// line-height: 35px;
-// letter-spacing: 2px;
-// text-align: right;
-
-
 
 export const Title = styled.h2<SwiperWrapperProps>`
   font-family: "Helvetica Neue", sans-serif;

@@ -15,6 +15,7 @@ import {
   OrderIconContainer,
   Title,
   OrderHistoryButton,
+  MenuOption,
 } from "./NavigationBarStyles";
 import Logo from "../../assets/Icons/about-logo@3x 1.png";
 import { NavigationBarProps } from "./Types";
@@ -76,6 +77,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
       <CenteredContainer>
         <img src={Logo} alt="Logo" />
         <span className="epicure-title">EPICURE</span>
+        {menuOptions.map((option, index) => (
+          <MenuOption key={index}>{option}</MenuOption>
+        ))}
       </CenteredContainer>
       <RightContainer>{rightIcons}</RightContainer>
       {isDropdownOpen && (

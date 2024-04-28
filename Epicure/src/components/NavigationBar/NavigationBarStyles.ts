@@ -138,7 +138,6 @@ export const DropdownMenu = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  //gap: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   //border: 5px solid saddlebrown;
@@ -146,6 +145,7 @@ export const DropdownMenu = styled.div`
 
 export const DropdownItem = styled.div`
   font-family: Helvetica Neue;
+  //border: 5px solid darkblue;
   padding: 8px 20px;
   font-size: 18px;
   font-weight: 200;
@@ -196,7 +196,6 @@ export const CloseButton = styled.button`
 `;
 export const OrderIconContainer = styled.div`
   position: absolute;
-  //position: fixed;
   top: 45px;
   left: 0%;
   width: 100%;
@@ -210,18 +209,12 @@ export const OrderIconContainer = styled.div`
   gap: 20px;
   align-items: center;
   //border: 5px solid darkblue;
-  /* @media (min-width: 900px) {
-    top: 60px;
-  } */
+  
   @media (min-width: 1400px) {
-    //margin-left: 1023px;
-    //justify-content: end;
-    //position: fixed;
-    //padding-right: 0px;
+
     top: 60px;
     width: 497px;
     height: 586px;
-    //position: sticky;
     gap: 38px;
     left: auto;
     right: 0px;

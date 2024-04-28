@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import colors from "../../data/colors";
 
-
 export const ChefProfileContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 88px;
+  margin-top: 98px;
   //border: 5px solid red;
   justify-content: center;
   align-items: center;
@@ -19,7 +18,6 @@ export const ChefProfileContainer = styled.section`
   }
 `;
 
-
 export const ChefBio = styled.p`
   padding-top: 20px;
   font-family: "Helvetica Neue", sans-serif;
@@ -27,11 +25,9 @@ export const ChefBio = styled.p`
   font-weight: 200;
   line-height: 28px;
   letter-spacing: 1.25px;
-  text-align: justify;
-  padding-left: 20px;
-  padding-right: 20px;
+
   @media (min-width: 1300px) {
-    padding-top: 0px;
+    padding-top: 17px;
     width: 642px;
     height: 255px;
     font-size: 24px;
@@ -39,7 +35,7 @@ export const ChefBio = styled.p`
   }
 `;
 export const Title = styled.h2`
-position: absolute;
+  position: absolute;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 200;
@@ -48,15 +44,13 @@ position: absolute;
   align-self: flex-start;
   left: 50%;
   transform: translateX(-166px);
-  margin-bottom: 1000px;
-  //margin-bottom: 17px;
+  margin-bottom: 950px;
   //border: 5px solid pink;
-  //padding-left: 28px;
   @media (min-width: 900px) {
-   position: relative;
-   transform: translateX(0);
+    position: relative;
+    transform: translateX(0);
 
-   left: 0%;
+    left: 0%;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
@@ -65,25 +59,19 @@ position: absolute;
   }
 `;
 
-
 export const ChefInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 335px;
   height: auto;
-  //width: 100%;
-  justify-content: center;
   //border: 5px solid pink;
-  align-items: center;
   margin-bottom: 48px;
-  //padding-bottom: 32px;
 
   @media (min-width: 900px) {
     width: auto;
     flex-direction: row;
     padding-bottom: 45px;
     justify-content: center;
-    //margin-top: ;
   }
 `;
 
@@ -93,8 +81,7 @@ export const CardImageContainer = styled.div`
   width: 335px;
   display: flex;
   justify-content: center;
-  //align-items: center;
-  //border: 5px solid darkblue;
+
   @media (min-width: 900px) {
     height: 372px;
     width: 478px;
@@ -112,12 +99,6 @@ export const CardImage = styled.img`
     width: 478px;
   }
 `;
-// font-family: Helvetica Neue;
-// font-size: 18px;
-// font-weight: 400;
-// line-height: 47px;
-// letter-spacing: 2.6700000762939453px;
-// text-align: center;
 
 export const NameOnImage = styled.div`
   position: absolute;
@@ -135,6 +116,8 @@ export const NameOnImage = styled.div`
   letter-spacing: 2.67px;
   font-weight: 400;
   text-align: center;
+  @media (min-width: 900px) {
+    height: 78px;
+    font-size: 40px;
+  }
 `;
-
-

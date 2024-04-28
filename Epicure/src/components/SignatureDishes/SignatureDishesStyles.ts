@@ -11,7 +11,6 @@ export const SignatureDishesContainer = styled.section`
     margin-top: 160px;
     justify-content: center;
     align-items: center;
-    //padding-left: 127px;
     align-self: center;
   }
 `;

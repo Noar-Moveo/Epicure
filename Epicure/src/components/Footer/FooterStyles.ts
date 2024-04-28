@@ -7,13 +7,11 @@ export const MidFooterContainer = styled.div`
   align-items: flex-start;
   gap: 30px;
   padding: 20px;
-  //margin-top: 48px;
 
   @media (min-width: 1200px) {
     width: 100%;
     padding-left: 132px;
     margin-bottom: 0;
-   // margin-top: 80px;
   }
 `;
 
@@ -51,7 +49,7 @@ export const ContentContainer = styled.div`
 export const LogoContainer = styled.div`
   padding-bottom: 20px;
   @media (min-width: 1200px) {
-    padding-left: 350px;
+    padding-left: 400px;
     padding-top: 300px;
     order: 2;
     width: 178.22px;
@@ -64,7 +62,7 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   width: 102px;
   height: 95px;
-  @media (min-width: 1400px) {
+  @media (min-width: 1300px) {
     position: static;
     left: 11 33px;
     order: 4;
@@ -82,7 +80,7 @@ export const DownLoadContainer = styled.div`
   //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     order: 3;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 16px;
   }
 `;
@@ -115,6 +113,7 @@ export const Title = styled.h3`
     font-size: 30px;
     order: 1;
     width: auto;
+    padding-bottom: 0px;
   }
 `;
 
@@ -133,6 +132,7 @@ export const Description = styled.p`
     font-size: 20px;
     width: 569px;
     height: auto;
+    white-space: pre-wrap;
   }
 `;
 
@@ -156,8 +156,6 @@ export const MenuContainer = styled.div`
     padding: 20px;
   }
 `;
-
-
 
 export const MenuItem = styled.button`
   font-family: Helvetica Neue;

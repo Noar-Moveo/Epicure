@@ -18,20 +18,21 @@ export const IconIndicatorContainer = styled.section`
   }
 `;
 
-
 export const Title = styled.h3`
   font-family: Helvetica Neue;
   font-size: 18px;
   font-weight: 200;
   line-height: 35px;
   letter-spacing: 1.25px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   @media (min-width: 1200px) {
     font-size: 30px;
+    margin-bottom: 10px;
   }
 `;
 
 export const Icons_ = styled.div`
+gap: 30px;
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: row;
@@ -43,11 +44,12 @@ export const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 45px;
+  margin-bottom: 56px;
   //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     flex-direction: column;
     margin-bottom: 20px;
+    gap: 20px;
   }
 `;
 
@@ -57,8 +59,8 @@ export const Icon = styled.img`
   margin-right: 10px;
   @media (min-width: 1200px) {
     margin-right: 20px;
-    width: 69.58px;
-    height: 43.83px;
+    width: auto;
+    height: 53.83px;
   }
 `;
 
@@ -70,7 +72,7 @@ export const Text = styled.span`
   letter-spacing: 1.25px;
   margin-bottom: 20px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
   @media (min-width: 1200px) {
     padding-top: 0;
     margin-bottom: 0;

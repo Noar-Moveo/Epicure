@@ -34,7 +34,6 @@ export const TextSearch1 = styled.div`
   letter-spacing: 1.97px;
   text-align: center;
   margin-top: 0px;
-  font-weight: 300;
   //border: 5px solid firebrick;
   @media (min-width: 900px) {
     width: 452px;
