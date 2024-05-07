@@ -5,12 +5,12 @@ import { Card, Title, Chef, Stars } from "./ExtensionRestaurantsCardStyles";
 const ExtensionRestaurantCard: React.FC<ExtensionRestaurantCardProps> = ({
   name,
   chef,
-  starsImage,
+  stars,
 }) => (
   <Card>
     <Title>{name}</Title>
-    <Chef> {chef}</Chef>
-    {starsImage && <Stars src={starsImage} alt="Restaurant Rating Stars" />}
+    <Chef>{chef.name}</Chef>
+    { <Stars src={stars} alt="Restaurant Rating Stars" />}
   </Card>
 );
 

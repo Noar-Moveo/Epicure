@@ -2,10 +2,12 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Chef, ChefsState } from "../../../data/State/StateTypes";
 
+axios.defaults.baseURL = "http://localhost:3000/api/v1";
+
 export const fetchChefs = createAsyncThunk(
   "chefs/fetchChefs",
   async (): Promise<Chef[]> => {
-    const response = await axios.get<Chef[]>("/api/chefs");
+    const response = await axios.get<Chef[]>("/chefs");
     return response.data;
   }
 );
@@ -13,7 +15,7 @@ export const fetchChefs = createAsyncThunk(
 export const addChef = createAsyncThunk(
   "chefs/addChef",
   async (chef: Chef): Promise<Chef> => {
-    const response = await axios.post<Chef>("/api/chefs", chef);
+    const response = await axios.post<Chef>("/chefs", chef);
     return response.data;
   }
 );
@@ -21,7 +23,7 @@ export const addChef = createAsyncThunk(
 export const deleteChef = createAsyncThunk(
   "chefs/deleteChef",
   async (id: string): Promise<string> => {
-    await axios.delete(`/api/chefs/${id}`);
+    await axios.delete(`/chefs/${id}`);
     return id;
   }
 );

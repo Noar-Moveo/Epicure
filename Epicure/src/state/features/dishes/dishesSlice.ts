@@ -2,10 +2,12 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Dish } from "../../../data/State/StateTypes";
 
+axios.defaults.baseURL = "http://localhost:3000/api/v1";
+
 export const fetchDishes = createAsyncThunk(
   "dishes/fetchDishes",
   async (): Promise<Dish[]> => {
-    const response = await axios.get<Dish[]>("/api/dishes");
+    const response = await axios.get<Dish[]>("/dishes");
     return response.data;
   }
 );
@@ -13,7 +15,7 @@ export const fetchDishes = createAsyncThunk(
 export const addDish = createAsyncThunk(
   "dishes/addDish",
   async (dish: Dish): Promise<Dish> => {
-    const response = await axios.post<Dish>("/api/dishes", dish);
+    const response = await axios.post<Dish>("/dishes", dish);
     return response.data;
   }
 );
@@ -21,7 +23,7 @@ export const addDish = createAsyncThunk(
 export const deleteDish = createAsyncThunk(
   "dishes/deleteDish",
   async (id: string): Promise<string> => {
-    await axios.delete(`/api/dishes/${id}`);
+    await axios.delete(`/dishes/${id}`);
     return id;
   }
 );
