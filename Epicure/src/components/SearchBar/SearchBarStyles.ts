@@ -1,28 +1,30 @@
 import styled from "styled-components";
-import colors from "../../colors";
+import colors from "../../data/colors";
 
 export const SearchContainer1 = styled.div`
-  width: 335px;
-  height: 144px;
-  min-width: 335px;
-  min-height: 144px;
-  max-width: 776px;
-  max-height: 221px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 776px;
+  height: 221px;
+  background-color: rgba(255, 255, 255, 0.88);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 18px;
-  background: ${colors.white}e0;  
+  background: ${colors.white}e0;
   padding: 10px;
   padding-top: 16px;
   padding-bottom: 64px;
-`;
+  //border: 5px solid red;
 
+  @media (max-width: 900px) {
+    width: 335px;
+    height: 144px;
+  }
+`;
 
 export const TextSearch1 = styled.div`
   font-family: Helvetica Neue;
@@ -31,7 +33,16 @@ export const TextSearch1 = styled.div`
   line-height: 32px;
   letter-spacing: 1.97px;
   text-align: center;
-  margin-top: 0px; 
+  margin-top: 0px;
+  //border: 5px solid firebrick;
+  @media (min-width: 900px) {
+    width: 452px;
+    height: 80px;
+    font-size: 32px;
+    letter-spacing: 1.97px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const SearchBar1 = styled.input`
@@ -43,9 +54,19 @@ export const SearchBar1 = styled.input`
   font-family: Helvetica Neue;
   font-size: 14px;
   color: ${colors.black};
+  //border: 5px solid darkblue;
   border-radius: 4px;
   ::placeholder {
     color: ${colors.black};
+  }
+  @media (min-width: 900px) {
+    width: 505px;
+    height: 48px;
+    ::placeholder {
+      color: ${colors.black};
+      font-size: 34px;
+      font-weight: 200;
+    }
   }
 `;
 
@@ -59,5 +80,12 @@ export const InputContainer = styled.div<{ icon: string }>`
   display: flex;
   align-items: center;
   position: absolute;
-  margin-top: 125px; 
+  margin-top: 125px;
+  //border: 5px solid pink;
+  @media (min-width: 900px) {
+    width: 505px;
+    height: 48px;
+    font-size: 34px;
+    font-weight: 200;
+  }
 `;
