@@ -24,6 +24,8 @@ function Carousel<T extends CardItem>({
 }: CarouselProps<T>): JSX.Element {
   const dataItems = useSelector(dataSelector);
 
+  console.log("Data items received in Carousel:", dataItems);
+
   return (
     <CarouselContainer>
       <Title isChefProfile={isChefProfile}>{title}</Title>
@@ -48,8 +50,8 @@ function Carousel<T extends CardItem>({
         </Fade>
       </SwiperWrapper>
       <AllRestaurantsButton isVisible={isVisible}>
-      All Restaurants {">>"}
-    </AllRestaurantsButton>
+        All Restaurants {">>"}
+      </AllRestaurantsButton>
     </CarouselContainer>
   );
 }

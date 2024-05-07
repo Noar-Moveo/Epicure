@@ -9,7 +9,7 @@ const ExtensionRestaurantCard: React.FC<ExtensionRestaurantCardProps> = ({
 }) => (
   <Card>
     <Title>{name}</Title>
-    <Chef> {chef}</Chef>
+    <Chef>{chef.name}</Chef>
     {starsImage && <Stars src={starsImage} alt="Restaurant Rating Stars" />}
   </Card>
 );

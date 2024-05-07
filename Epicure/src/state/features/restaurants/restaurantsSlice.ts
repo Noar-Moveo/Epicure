@@ -2,10 +2,13 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Restaurant, RestaurantState } from "../../../data/State/StateTypes";
 
+axios.defaults.baseURL = "http://localhost:3000/api/v1";
+
 export const fetchRestaurants = createAsyncThunk(
   "restaurants/fetchRestaurants",
   async (): Promise<Restaurant[]> => {
-    const response = await axios.get<Restaurant[]>("/api/restaurants");
+    const response = await axios.get<Restaurant[]>("/restaurants");
+    console.log("API data:", response.data);
     return response.data;
   }
 );
@@ -13,10 +16,7 @@ export const fetchRestaurants = createAsyncThunk(
 export const addRestaurant = createAsyncThunk(
   "restaurants/addRestaurant",
   async (restaurant: Restaurant): Promise<Restaurant> => {
-    const response = await axios.post<Restaurant>(
-      "/api/restaurants",
-      restaurant
-    );
+    const response = await axios.post<Restaurant>("/restaurants", restaurant);
     return response.data;
   }
 );
@@ -24,7 +24,7 @@ export const addRestaurant = createAsyncThunk(
 export const deleteRestaurant = createAsyncThunk(
   "restaurants/deleteRestaurant",
   async (id: string): Promise<string> => {
-    await axios.delete(`/api/restaurants/${id}`);
+    await axios.delete(`/restaurants/${id}`);
     return id;
   }
 );
@@ -42,6 +42,7 @@ const restaurantsSlice = createSlice({
       .addCase(
         fetchRestaurants.fulfilled,
         (state, action: PayloadAction<Restaurant[]>) => {
+          console.log("Updating state with:", action.payload);
           state.value = action.payload;
         }
       )
