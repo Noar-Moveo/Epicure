@@ -19,7 +19,7 @@ export const FooterContainer = styled.section`
   width: 100%;
   background: ${colors.lightGray};
   //border: 5px solid darkblue;
-  margin-top: 78px;
+  margin-top: 98px;
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: column;

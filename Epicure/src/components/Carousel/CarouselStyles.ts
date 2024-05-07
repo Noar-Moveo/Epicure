@@ -21,11 +21,17 @@ export const StyledSwiper = styled(Swiper)`
   align-items: center;
   //border: 5px solid darkblue;
   gap: 0px;
+
+
   .swiper-wrapper {
     align-items: center;
     display: flex;
     //border: 5px solid darkblue;
     position: relative;
+    @media (min-width: 1200px) {
+      touch-action: none; 
+      pointer-events: none; 
+    }
   }
 
   .swiper-slide {
@@ -34,6 +40,8 @@ export const StyledSwiper = styled(Swiper)`
     //border: 5px solid rebeccapurple;
     justify-content: center;
     align-items: center;
+
+
   }
 `;
 
@@ -62,7 +70,7 @@ export const AllRestaurantsButton = styled.button<SwiperWrapperProps_>`
   cursor: pointer;
   font-size: 16px;
   font-family: Helvetica Neue;
-  font-weight: 400;
+  font-weight: 300;
   width: 182px;
   height: 30px;
   letter-spacing: 2px;
@@ -96,8 +104,10 @@ export const Title = styled.h2<SwiperWrapperProps>`
   text-align: left;
   margin-bottom: 17px;
   padding-left: 10px;
+  text-transform: ${({ isChefProfile }) => isChefProfile ? 'uppercase' : 'none'};
   //border: 5px solid pink;
   @media (min-width: 900px) {
+    text-transform: ${({ isChefProfile }) => isChefProfile ? 'none' : 'uppercase'}; 
     font-size: 30px;
     line-height: 35px;
     text-align: center;

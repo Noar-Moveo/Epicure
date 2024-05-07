@@ -28,7 +28,7 @@ export const Title = styled.h3`
   color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 2.6700000762939453px;
   text-align: left;
 

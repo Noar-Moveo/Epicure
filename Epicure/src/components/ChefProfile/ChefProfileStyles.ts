@@ -114,7 +114,7 @@ export const NameOnImage = styled.div`
   font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   letter-spacing: 2.67px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   @media (min-width: 900px) {
     height: 78px;

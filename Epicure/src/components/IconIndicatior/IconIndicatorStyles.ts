@@ -10,7 +10,7 @@ export const IconIndicatorContainer = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  margin-top: 78px;
+  margin-top: 98px;
   //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     gap: 30px;
@@ -32,7 +32,7 @@ export const Title = styled.h3`
 `;
 
 export const Icons_ = styled.div`
-gap: 30px;
+  gap: 30px;
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: row;
@@ -45,6 +45,7 @@ export const IconContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 56px;
+  justify-content: center;
   //border: 5px solid darkblue;
   @media (min-width: 1200px) {
     flex-direction: column;
@@ -56,9 +57,7 @@ export const IconContainer = styled.div`
 export const Icon = styled.img`
   width: auto;
   height: 60px;
-  margin-right: 10px;
   @media (min-width: 1200px) {
-    margin-right: 20px;
     width: auto;
     height: 53.83px;
   }

@@ -28,7 +28,7 @@ export const Title = styled.h3`
   margin: 0;
   color: ${colors.black};
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 21.47px;
   letter-spacing: 2.6700000762939453px;
@@ -36,7 +36,7 @@ export const Title = styled.h3`
   @media (min-width: 1200px) {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 47px;
   }
 `;
