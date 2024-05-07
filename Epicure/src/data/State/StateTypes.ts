@@ -24,6 +24,7 @@ export interface Restaurant {
   image: string;
   chef: Chef;
   status: string;
+  stars: string;
   dishes: string[];
 }
 

@@ -23,20 +23,30 @@ import {
 import ChefPicture from "../../assets/Images/YosiChef.png";
 import { Fade } from "react-awesome-reveal";
 
+const chefName = "Yossi Shitrit";
 
-const chefId = "6639118f3654df23dfe83983";
-
-const selectRestaurantsByChefId = (state: RootState) =>
-  state.restaurants.value.filter(
-    (restaurant) => restaurant.chef === chefId
-  );
+const selectRestaurantsByChef = (state: RootState): Restaurant[] =>
+  state.restaurants.value
+    .filter((restaurant) => restaurant.chef.name === chefName)
+    .map((restaurant) => ({
+      id: restaurant.id,
+      name: restaurant.name,
+      image: restaurant.image,
+      chef: restaurant.chef,
+      status: restaurant.status,
+      stars: restaurant.stars,
+      dishes: restaurant.dishes,
+    }));
 
 const ChefProfile = () => {
   const dispatch = useAppDispatch();
-  const restaurants = useSelector(selectRestaurantsByChefId);
+  const restaurants = useSelector(selectRestaurantsByChef);
+  console.log("Restaurants from state:", restaurants);
 
   useEffect(() => {
-    dispatch(fetchRestaurants());
+    dispatch(fetchRestaurants()).then(() => {
+      console.log("Restaurants fetched");
+    });
   }, [dispatch]);
 
   console.log("Restaurants from state for Chef ID:", restaurants);
@@ -56,7 +66,7 @@ const ChefProfile = () => {
       <Carousel<Restaurant>
         title={title_chefRestaurants}
         CardComponent={(props) => <ExtensionChefRestaurantCard {...props} />}
-        dataSelector={selectRestaurantsByChefId}
+        dataSelector={selectRestaurantsByChef}
         isChefProfile={true}
       />
     </ChefProfileContainer>

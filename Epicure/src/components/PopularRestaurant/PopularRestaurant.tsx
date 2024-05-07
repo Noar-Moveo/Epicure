@@ -16,6 +16,7 @@ const selectRestaurants = (state: RootState) =>
     image: item.image,
     chef: item.chef,
     status: item.status,
+    stars: item.stars,
     dishes: item.dishes,
   }));
 
