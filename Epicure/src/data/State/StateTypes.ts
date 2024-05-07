@@ -1,6 +1,7 @@
 export interface Chef {
   id: string;
   name: string;
+  imageUrl: string;
 }
 
 export interface ChefsState {
@@ -10,6 +11,9 @@ export interface ChefsState {
 export interface Dish {
   id: string;
   name: string;
+  price: number;
+  ingredients: string[];
+  imageUrl: string;
 }
 
 export interface DishesState {
@@ -19,6 +23,9 @@ export interface DishesState {
 export interface Restaurant {
   id: string;
   name: string;
+  chef: string;
+  imageUrl: string;
+  starsImage?: string;
 }
 
 export interface RestaurantState {
