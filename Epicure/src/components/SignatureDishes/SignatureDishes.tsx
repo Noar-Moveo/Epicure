@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useAppDispatch } from "../../hooks/useFetchData";
-import { useSelector } from "react-redux";
+// import { useAppDispatch } from "../../hooks/useFetchData";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchDishes } from "../../state/features/dishes/dishesSlice";
 import Carousel from "../Carousel/Carousel";
 import ExtensionDishCard from "../ExtensionDishesCard/ExtensionDishesCard";
@@ -22,13 +22,25 @@ const selectDishes = (state: RootState) =>
   }));
 
 function SignatureDishes() {
-  const dispatch = useAppDispatch();
-  const dishes = useSelector((state: RootState) => state.restaurants.value);
+  const dispatch = useDispatch();
+  const dishes = useSelector(selectDishes);
 
   useEffect(() => {
-    dispatch(fetchDishes());
-  }, [dispatch]);
+    // Initial fetch
+    dispatch(fetchDishes()).then(() => {
+      console.log("Dishes fetched");
+    });
 
+    // Set up polling
+    const interval = setInterval(() => {
+      dispatch(fetchDishes()).then(() => {
+        console.log("Dishes updated");
+      });
+    }, 10000); // Poll every 10 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, [dispatch]);
   console.log("Dishes from state:", dishes);
   return (
     <SignatureDishesContainer>

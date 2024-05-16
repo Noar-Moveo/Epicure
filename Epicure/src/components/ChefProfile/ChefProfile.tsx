@@ -44,10 +44,25 @@ const ChefProfile = () => {
   console.log("Restaurants from state:", restaurants);
 
   useEffect(() => {
+    // Fetch restaurants initially
     dispatch(fetchRestaurants()).then(() => {
       console.log("Restaurants fetched");
     });
+
+    // Set up polling
+    const interval = setInterval(() => {
+      dispatch(fetchRestaurants()).then(() => {
+        console.log("Restaurants updated");
+      });
+    }, 10000); // Poll every 10 seconds
+
+    return () => clearInterval(interval);
   }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchRestaurants()).then(() => {
+  //     console.log("Restaurants fetched");
+  //   });
+  // }, [dispatch]);
 
   console.log("Restaurants from state for Chef ID:", restaurants);
 
